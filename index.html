@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOWNitUP Desktop Releases</title>
+  <meta name="description" content="Download the latest DOWNitUP desktop build for macOS.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --text: #17202a;
+      --muted: #5d6876;
+      --border: #d8dee7;
+      --accent: #0877d1;
+      --accent-hover: #0667b6;
+      --warning-bg: #fff7df;
+      --warning-border: #e6b84c;
+      --warning-text: #4f3a00;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111418;
+        --panel: #1a1f26;
+        --text: #eef2f6;
+        --muted: #a7b1be;
+        --border: #303844;
+        --accent: #4aa3ff;
+        --accent-hover: #72b8ff;
+        --warning-bg: #302715;
+        --warning-border: #8d6d22;
+        --warning-text: #ffe4a3;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    main {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.55;
+    }
+
+    .release {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .release h2 {
+      margin: 0 0 8px;
+      font-size: 1.45rem;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      margin: 0 0 22px;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 7px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: var(--accent-hover);
+    }
+
+    .secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--border);
+    }
+
+    .secondary:hover {
+      background: color-mix(in srgb, var(--accent) 10%, transparent);
+    }
+
+    .warning {
+      margin: 20px 0;
+      padding: 14px 16px;
+      border: 1px solid var(--warning-border);
+      border-radius: 8px;
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      line-height: 1.45;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.93em;
+    }
+
+    dl {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 10px 16px;
+      margin: 18px 0 0;
+    }
+
+    dt {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    dd {
+      margin: 0;
+    }
+
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 560px) {
+      main {
+        padding: 34px 0;
+      }
+
+      .release {
+        padding: 18px;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      dl {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>DOWNitUP Desktop Releases</h1>
+      <p class="lead">Download the public desktop build of DOWNitUP, a download manager for HTTP and BitTorrent files.</p>
+    </header>
+
+    <section class="release" aria-labelledby="release-title">
+      <h2 id="release-title">macOS v1.0.0</h2>
+      <p class="meta">DMG installer for Apple Silicon and Intel Macs.</p>
+
+      <div class="actions">
+        <a class="button" href="https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/download/v1.0.0/DOWNitUP-1.0.0.dmg">Download for macOS</a>
+        <a class="button secondary" href="https://github.com/romreviewer/DOWNitUP-Desktop-releases/releases/tag/v1.0.0">View release notes</a>
+      </div>
+
+      <div class="warning">
+        This macOS build is currently unsigned and not notarized. macOS may show a Gatekeeper warning when opening it.
+      </div>
+
+      <dl>
+        <dt>Version</dt>
+        <dd>1.0.0</dd>
+
+        <dt>File</dt>
+        <dd><code>DOWNitUP-1.0.0.dmg</code></dd>
+
+        <dt>Size</dt>
+        <dd>189 MB</dd>
+
+        <dt>SHA256</dt>
+        <dd><code>abaeb7c876954bdb09a6a2ee7185a1a8209490677455db21fdfb6e008232bc1e</code></dd>
+      </dl>
+    </section>
+
+    <footer>
+      Source and release files are hosted on <a href="https://github.com/romreviewer/DOWNitUP-Desktop-releases">GitHub</a>.
+    </footer>
+  </main>
+</body>
+</html>
